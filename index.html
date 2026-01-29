@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Traitor — Inscription gratuite</title>
+  <meta name="description" content="The Traitor : un jeu de déduction sociale et de trahison. Inscription gratuite pour accéder à la bêta." />
+
+  <style>
+    :root{
+      --bg:#07070a;
+      --card:#0f1016;
+      --text:#e9e9ef;
+      --muted:#a8a9b6;
+      --line:#1d1f2a;
+      --accent:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 20% 0%, #141526 0%, var(--bg) 55%) no-repeat,
+                  radial-gradient(900px 500px at 90% 10%, #161028 0%, var(--bg) 55%) no-repeat,
+                  var(--bg);
+      min-height:100vh;
+    }
+    .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 64px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px}
+    .mark{
+      width:38px;height:38px;border:1px solid var(--line);border-radius:12px;
+      display:grid;place-items:center;background:rgba(255,255,255,0.03)
+    }
+    .mark span{font-weight:700;letter-spacing:.08em}
+    .pill{
+      font-size:12px;color:var(--muted);
+      padding:8px 10px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(255,255,255,0.03)
+    }
+    .hero{padding:54px 0;display:grid;grid-template-columns:1.2fr .8fr;gap:26px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .card{
+      border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,0.03);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    }
+    .hero-left{padding:34px}
+    h1{font-size:44px;margin:16px 0}
+    p{color:var(--muted);line-height:1.6}
+    .points{list-style:none;padding:0;display:grid;gap:10px}
+    .points li{padding:10px 12px;border:1px solid var(--line);border-radius:16px}
+    .form-card{padding:18px}
+    form{display:grid;gap:12px}
+    input, select, textarea{
+      width:100%;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,0.25);
+      color:var(--text);
+    }
+    button{
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.22);
+      background:rgba(255,255,255,0.15);
+      font-weight:700;
+      cursor:pointer;
+    }
+    footer{margin-top:40px;color:var(--muted);font-size:12px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark"><span>TT</span></div>
+        <strong>The Traitor</strong>
+      </div>
+      <div class="pill">Bêta privée • Inscription gratuite</div>
+    </header>
+
+    <section class="hero">
+      <div class="card hero-left">
+        <h1>Découvre qui ment.<br>Protège ton équipe.</h1>
+        <p>
+          <strong>The Traitor</strong> est un jeu de déduction sociale basé sur la trahison,
+          les alliances et le bluff. Inscris-toi gratuitement pour accéder à la bêta.
+        </p>
+
+        <ul class="points">
+          <li>🎭 Parfait pour animations, team building et groupes</li>
+          <li>🧠 Règles simples, tension immédiate</li>
+          <li>🚀 Accès anticipé et évolutions futures</li>
+        </ul>
+      </div>
+
+      <aside class="card form-card">
+        <h3>Inscription gratuite</h3>
+
+        <form action="https://formspree.io/f/mgoyakjg" method="POST">
+          <input name="prenom" placeholder="Prénom" required>
+          <input name="nom" placeholder="Nom" required>
+          <input type="email" name="email" placeholder="Email" required>
+
+          <select name="profil" required>
+            <option value="" disabled selected>Profil</option>
+            <option>Animateur / Team Building</option>
+            <option>Testeur</option>
+            <option>Curieux</option>
+          </select>
+
+          <textarea name="message" placeholder="Pourquoi veux-tu tester The Traitor ?"></textarea>
+
+          <button type="submit">S’inscrire</button>
+        </form>
+      </aside>
+    </section>
+
+    <footer>
+      © 2026 — The Traitor • bêta
+    </footer>
+  </div>
+</body>
+</html>
